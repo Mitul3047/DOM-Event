@@ -7,13 +7,32 @@
 </head>
 <body>
     <h1 id="handler-status">DOM event handler</h1>
+    <h2 id="input-text-dispaly">Input text</h2>
+    <input id="input-field" type="text">
+    <button id="buttonUpdate">update</button>
+    <br>
+    <br>
     <button onclick="hasClicked()">Click the button</button>
+    <button id="event-listener">eventListener</button>
     <script>
         function hasClicked(){
             console.log('button has beed clicked')
             const handlerStatus = document.getElementById('handler-status')
-            handlerStatus.innerText='inneter text has beed changed by handler'
+            handlerStatus.innerText='Inneter text has beed changed by handler'
         }
+
+        document.getElementById('event-listener').addEventListener('click',function () {
+            const handlerStatus = document.getElementById('handler-status')
+            handlerStatus.innerText= 'This has been chnaged by event listern'
+        })
+
+        document.getElementById('buttonUpdate').addEventListener('click',function(){
+            // console.log('update button clicked')
+            const inputField = document.getElementById('input-field')
+            console.log(inputField.value)
+            const p = document.getElementById('input-text-dispaly')
+            p.innerText =inputField.value
+        })
     
     </script>
 </body>
