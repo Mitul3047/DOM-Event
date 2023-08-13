@@ -29,9 +29,11 @@
         document.getElementById('buttonUpdate').addEventListener('click',function(){
             // console.log('update button clicked')
             const inputField = document.getElementById('input-field')
-            console.log(inputField.value)
+            // console.log(inputField.value)
+            const inputText =inputField.value
             const p = document.getElementById('input-text-dispaly')
-            p.innerText =inputField.value
+            p.innerText =inputText;
+            inputField.value ='';
         })
     
     </script>
